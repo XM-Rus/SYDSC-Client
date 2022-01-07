@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SYDSC 삼육대 개발자 커뮤니티</title>
+    <meta name="description" content="삼육대학교 학생들을 위한 개발자 커뮤니티 입니다" />
+    <meta name="keywords" content="삼육대학교, 삼육대 컴공, 삼육대학교 컴퓨터공학과, 삼육대 개발자커뮤니티, 삼육대 지능정보," />
     <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 
-<body>
+<body onload="showClock()">
     <div class="nav-wrap">
         <nav>
             <img src="./img/main-logo.png">
@@ -22,14 +24,16 @@
     <div class="contents-board-wrap">
         <div class="contents-board">
             <div class="contents-board-left">
-                <div class="contents-dummy">
-                    게시판 더미 보드 입니다.
+                <div class="accout-form">
+                    <p>커뮤니티 이용을 위해 <span>로그인</span>이 필요합니다!</p>
+                    <button class="form-btn-login">로그인</button>
+                    <button class="form-btn-sign">회원가입</button>
                 </div>
-                <div class="contents-dummy">
-                    게시판 더미 보드 입니다.
+                <div class="contents-left-banner1">
+
                 </div>
-                <div class="contents-dummy">
-                    게시판 더미 보드 입니다.
+                <div class="contents-left-banner2">
+
                 </div>
                 <div class="contents-dummy">
                     게시판 더미 보드 입니다.
@@ -37,21 +41,52 @@
             </div>
             <div class="contents-board-center">
                 <div class="main-banner-wrap">
-                    배너 섹션 더미
+                </div>
+                <div class="contents-center-wrap">
+                    <div>
+                        <dt><a>게시판 제목</a></dt>
+                        <dd><a>글 제목</a>
+                            <a id="divClock" class="clock"></a>
+                        </dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                    </div>
+                    <div>
+                        <dt><a>게시판 제목</a></dt>
+                        <dd><a>글 제목</a>
+                            <a id="divClock" class="clock"></a>
+                        </dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                    </div>
                 </div>
                 <div class="contents-dummy">
                     게시판 더미 보드 입니다.
                 </div>
-                <div class="contents-dummy">
-                    게시판 더미 보드 입니다.
-                </div>
-                <div class="contents-dummy">
-                    게시판 더미 보드 입니다.
+                <div class="contents-center-wrap">
+                    <div>
+                        <dt><a>게시판 제목</a></dt>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                    </div>
+                    <div>
+                        <dt><a>게시판 제목</a></dt>
+                        <dd><a>글 제목</a>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                        <dd><a>글 제목</a> <a>시간</a></dd>
+                    </div>
                 </div>
             </div>
             <div class="contents-board-right">
-                <div class="contents-dummy">
-                    게시판 더미 보드 입니다.
+                <div class="contents-board-right-search">
+                    <input placeholder="검색어를 입력하세요.">
+                    <button class="right-serach-btn">검색</button>
                 </div>
                 <div class="contents-dummy">
                     게시판 더미 보드 입니다.
@@ -65,6 +100,19 @@
             </div>
         </div>
     </div>
+    <script language="javascript">
+        function showClock() {
+            var currentDate = new Date();
+            var divClock = document.getElementById("divClock");
+
+            var msg = currentDate.getHours() + "시"
+            msg += currentDate.getMinutes() + "분";
+            msg += currentDate.getSeconds() + "초";
+
+            divClock.innerText = msg;
+            setTimeout(showClock, 1000);
+        }
+    </script>
 </body>
 
 </html>
