@@ -42,6 +42,7 @@ button {
   height: 40px;
   width: 66px;
   color: #006241;
+  font-weight: 600;
 }
 
 .nav-btn-sign {
@@ -51,6 +52,7 @@ button {
   height: 40px;
   width: 76px;
   color: #006241;
+  font-weight: 600;
 }
 
 .contents-board-wrap {
@@ -132,6 +134,7 @@ button {
   border: 1px solid lightgray;
   margin: 6px 0;
   height: 40px;
+  font-weight: bold;
   color: #006241;
 }
 
@@ -141,6 +144,7 @@ button {
   border: 1px solid lightgray;
   margin-bottom: 6px;
   height: 40px;
+  font-weight: bold;
   color: #fff;
 }
 .contents-left-banner1 {
@@ -166,7 +170,7 @@ button {
   width: 49% !important;
   border: 1px solid #006241;
   background-color: #fff;
-  padding: 10px 0;
+  padding: 10px 0 0 0;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -210,6 +214,7 @@ button {
 .contents-center-wrap div dt a {
   margin: 0 10px;
   text-decoration: none;
+  color: #000;
 }
 .contents-board-right-search {
   box-sizing: border-box;
@@ -232,4 +237,178 @@ button {
   width: 20%;
   height: 100%;
   border: none;
+}
+.contents-right-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.contents-right-wrap div {
+  width: 100% !important;
+  border: 1px solid lightgray;
+  background-color: #f9f9f9;
+  padding: 10px 0 0 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.contents-right-wrap div dt {
+  color: #006241;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  margin: 0 auto;
+  padding: 7px 0;
+  font-size: 15px;
+}
+.contents-right-wrap div dd {
+  color: #000;
+  text-align: left;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+.contents-right-wrap div dd ul {
+  display: flex;
+  list-style: none;
+  width: 55%;
+  justify-content: space-between;
+  margin: 0 10px !important;
+  padding: 0 !important;
+  font-size: 12px;
+}
+.contents-right-wrap div a {
+  margin: 0 10px !important;
+  text-decoration: none;
+}
+
+.contents-right-wrap div dd:hover {
+  background-color: lightsteelblue;
+}
+
+.contents-right-wrap div dd:last-child {
+  color: #000;
+  text-align: left;
+  border-bottom: none !important;
+  margin: 0 auto;
+}
+.contents-right-wrap div dt a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #006241;
+}
+
+#modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+
+#modal h2 {
+  margin: 0;
+}
+
+#modal button {
+  width: 70px;
+  background-color: #006241;
+  color: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  border: none;
+}
+
+#modal .modal_content {
+  width: 100%;
+  padding: 20px 10px;
+  position: fixed;
+  top: 120px;
+}
+.modal-content-board {
+  width: 60%;
+  margin: 0 auto;
+  background: #fff;
+  border: 2px solid #666;
+  border-radius: 50px;
+  height: auto;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.width-85 {
+  width: 85%;
+  padding: 20px 0;
+}
+
+#modal .modal_layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.modal-btn-img {
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  left: 30px;
+  width: 100px;
+}
+.type-btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 25px;
+  margin: 10px 0;
+}
+
+.type-btn-style {
+  background-color: burlywood;
+  color: #fff;
+  padding: 10px 10px;
+  border: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-sec {
+  }
+
+  .location-img {
+    position: fixed;
+    cursor: pointer;
+    bottom: 45px;
+    right: 30px;
+    width: 50px;
+  }
+  .modal-btn-img {
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 80px;
+  }
+  .modal-content-board {
+    width: 85%;
+    margin: 0 auto;
+    background: #fff;
+    border: 2px solid #666;
+    border-radius: 50px;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
